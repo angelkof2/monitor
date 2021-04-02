@@ -5,14 +5,16 @@ After 10 years without programming, this is my first Python application, so I'm 
 
 Let me know if importing just part of the libraries makes a performance difference in PY. This are the changes that i have implemented:
 
-import psutil ---> from psutil import cpu_percent
-                   from psutil import virtual_memory
+DELTE: import psutil  
+ADD: from psutil import cpu_percent
+     from psutil import virtual_memory
                    
-from tkinter import * ---> from tkinter import Tk
-                           from tkinter import Label
-                           from tkinter import TRUE
-                           from tkinter import LEFT
+DELETE: from tkinter import * 
+ADD: from tkinter import Tk
+     from tkinter import Label
+     from tkinter import TRUE
+     from tkinter import LEFT
 
-I have created the .exe using pyinstaller.exe and the output weight the same and i think it consumes the same amount of resources.
+I have created the .exe using pyinstaller.exe and the output weight is the same and i think it consumes the same amount of resources.
 
 All insights are welcome.
