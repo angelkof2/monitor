@@ -1,24 +1,30 @@
-import psutil
-from tkinter import *
+from psutil import cpu_percent
+from psutil import virtual_memory
+from tkinter import TRUE
+from tkinter import Tk
 from tkinter.font import Font
+from tkinter import Label
+from tkinter import LEFT
 
 def cpumonitor():
-    monitorcpu = psutil.cpu_percent(interval=1,percpu=True)
+    monitorcpu = cpu_percent(interval=1,percpu=True)
     var01 = ""
     for i in range(len(monitorcpu)):
         var01 = var01 + "CPU" + str(i) + "=" + str(monitorcpu[i]) + "%\n"      
     return var01
 
 def rammonitor():
-    return "RAM:" + str(psutil.virtual_memory().percent) + "%"
+    return "RAM:" + str(virtual_memory().percent) + "%"
 
+#Window
 root = Tk()
-root.wm_attributes("-transparentcolor","white")
+root.wm_attributes("-transparentcolor","white","-topmost",1) #delete "'-topmost', 1" if you don't want it on top of everything
 root.geometry("170x200")
 root.config(bg="white")
 root.overrideredirect(TRUE)
 
 monitorfont = Font(size=20, family="Bahnschrift SemiBold")
+
 #LABELS
 cputxt = Label(root,text=cpumonitor(),font=monitorfont,bg="white",fg="#FFFFFE", justify=LEFT)
 cputxt.pack()
