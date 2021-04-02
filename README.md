@@ -10,7 +10,6 @@ ADD: from psutil import cpu_percent
      from psutil import virtual_memory
                    
 DELETE: from tkinter import *
-
 ADD: from tkinter import Tk
      from tkinter import Label
      from tkinter import TRUE
