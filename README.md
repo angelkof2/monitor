@@ -10,11 +10,14 @@ ADD: from psutil import cpu_percent
      from psutil import virtual_memory
                    
 DELETE: from tkinter import *
+
+
+
 ADD: from tkinter import Tk
      from tkinter import Label
      from tkinter import TRUE
      from tkinter import LEFT
 
-I have created the .exe using pyinstaller.exe and the output weight is the same and i think it consumes the same amount of resources.
+I have created the .exe using "pyinstaller.exe -w monitor.py"  and the output weight is the same and i think it consumes the same amount of resources.
 
 All insights are welcome.
