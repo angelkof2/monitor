@@ -20,7 +20,7 @@ def rammonitor():
 #Window
 root = Tk()
 root.wm_attributes("-transparentcolor","white","-topmost",1) #delete "'-topmost', 1" if you don't want it on top of everything
-root.geometry("170x200")
+root.geometry(str(50 + len(cpu_percent(percpu=True))*25)+"x195") #height base on the number of cpu logical cores
 root.config(bg="white")
 root.overrideredirect(TRUE)
 
