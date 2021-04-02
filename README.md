@@ -12,7 +12,6 @@ ADD: from psutil import cpu_percent
 DELETE: from tkinter import *
 
 
-
 ADD: from tkinter import Tk
      from tkinter import Label
      from tkinter import TRUE
