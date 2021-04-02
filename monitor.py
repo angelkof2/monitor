@@ -1,3 +1,4 @@
+#let me know if importing just part of the libraries makes a performance difference in PY
 from psutil import cpu_percent
 from psutil import virtual_memory
 from tkinter import TRUE
